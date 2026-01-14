@@ -5,7 +5,9 @@ import org.springframework.web.bind.annotation.*;
 import service.Note;
 import service.NoteService;
 
+import java.io.IOException;
 import java.util.List;
+import java.util.stream.Collectors;
 
 @RestController
 @RequestMapping("/api/v1/notes")
@@ -49,7 +51,20 @@ public class NoteController {
     public List<Note> search(@RequestParam String keyword) {
         return noteService.search(keyword);
     }
+
+
+    @PostMapping("/{id}/remind")
+    public String remind(@PathVariable Long id, @RequestParam(defaultValue = "30") Integer minutes) {
+        Note note = noteService.notes.get(id);
+        return " Напоминание о заметке " + note.getTitle() + " через " + minutes + " минут ";
+
+        //Object тип возвращаемого значения метода в JSON или в text
+
+    }
 }
+
+
+
 
 
 
