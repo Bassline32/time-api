@@ -6,18 +6,11 @@ import org.springframework.stereotype.Service;
 import java.util.*;
 import java.util.stream.Collectors;
 
-@Data
-class Note {
-    Long id;
-    String title;
-    String content;
-}
-
 
 @Service
 public class NoteService {
     //мапа ключ-значение
-    Map<Long, Note> notes = new HashMap<>();
+    public Map<Long, Note> notes = new HashMap<>();
 
     //возвращаем список заметок
     public List<Note> findAll() {
