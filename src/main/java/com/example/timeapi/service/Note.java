@@ -1,4 +1,4 @@
-package service;
+package com.example.timeapi.service;
 
 import lombok.Data;
 

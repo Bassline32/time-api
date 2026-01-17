@@ -1,6 +1,5 @@
-package service;
+package com.example.timeapi.service;
 
-import lombok.Data;
 import org.springframework.stereotype.Service;
 
 import java.util.*;

@@ -1,11 +1,11 @@
-package controller;
+package com.example.timeapi.controller;
 
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import service.Note;
-import service.NoteService;
+import com.example.timeapi.service.Note;
+import com.example.timeapi.service.NoteService;
 
 import java.util.List;
 import java.util.stream.Collectors;
